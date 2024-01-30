@@ -399,6 +399,13 @@ Defined values for the disposition of a material lot are
     </xsd:complexType>
 
     <!--     -->
+    <xsd:complexType name="LabelType">
+        <xsd:simpleContent>
+            <xsd:restriction base="TextType"/>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <!--     -->
     <xsd:simpleType name="DurationType">
         <xsd:restriction base="xsd:duration"/>
     </xsd:simpleType>

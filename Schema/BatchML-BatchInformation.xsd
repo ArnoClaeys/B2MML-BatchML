@@ -75,6 +75,8 @@
                                                  minOccurs = "0"/>
         <xsd:element name = "Version"            type = "IdentifierType"
                                                  minOccurs = "0"/>
+        <xsd:element name = "Label"              type = "LabelType"
+                                                 minOccurs = "0" maxOccurs = "unbounded"/>
         <xsd:element name = "Description"        type = "DescriptionType"
                                                  minOccurs = "0" maxOccurs = "unbounded"/>
         <xsd:element name = "IndividualApproval" type = "IndividualApprovalType"
@@ -99,6 +101,8 @@
   <xsd:complexType name = "BatchInformationType">
     <xsd:sequence>
       <xsd:element name = "ListHeader"          type = "ListHeaderType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Label"               type = "LabelType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
@@ -143,6 +147,8 @@
   <xsd:complexType name = "BatchListEntryType">
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType" />
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "BatchListEntryType"  type = "BatchListEntryTypeType"/>
@@ -187,6 +193,8 @@
   <xsd:complexType name = "BatchListType">
     <xsd:sequence>
       <xsd:element name = "ListHeader"          type = "ListHeaderType"     minOccurs = "0"/>
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "BatchListEntry"      type = "BatchListEntryType"
@@ -219,6 +227,8 @@
     <xsd:sequence>
       <xsd:element name = "ClassEquipmentID"    type = "IdentifierType" />
       <xsd:element name = "MemberEquipmentID"   type = "IdentifierType" />
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:ClassInstanceAssociation"
@@ -273,6 +283,8 @@
                                                   minOccurs = "0"/>
       <xsd:element name = "VersionDate"           type = "DateTimeType"
                                                   minOccurs = "0"/>
+      <xsd:element name = "LabelType"             type = "LabelType"
+                                                  minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"           type = "DescriptionType"
                                                   minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "BatchID"               type = "IdentifierType"
@@ -352,6 +364,8 @@
   <xsd:complexType name = "EnumerationSetType">
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType" />
+        <xsd:element name = "Label"             type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
         <xsd:element name = "Description"       type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
         <xsd:element name = "Enumeration"       type = "EnumerationType"
@@ -373,6 +387,8 @@
       <xsd:element name = "EnumerationNumber"   type = "EnumerationNumberType" />
       <xsd:element name = "EnumerationString"   type = "EnumerationStringType"
                                                 minOccurs = "0"/>
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:Enumeration"   minOccurs="0" maxOccurs="1"/>
@@ -383,6 +399,8 @@
   <xsd:complexType name = "EquipmentConnectionType" >
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType" />
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "ConnectionType"      type = "ConnectionTypeType" />
@@ -398,6 +416,8 @@
   <xsd:complexType name = "EquipmentElementType" >
     <xsd:sequence>
       <xsd:element name = "ID"                                  type = "IdentifierType" />
+      <xsd:element name = "Label"                               type = "LabelType"
+                                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"                         type = "DescriptionType"
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentElementType"                type = "EquipmentElementTypeType" />
@@ -453,6 +473,8 @@
   <xsd:complexType name = "EquipmentProceduralElementClassType" >
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType" />
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentProceduralElementType"
@@ -468,6 +490,8 @@
   <xsd:complexType name = "EquipmentProceduralElementType" >
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType" />
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentProceduralElementType"
@@ -510,6 +534,8 @@
       <xsd:element name = "ID"                  type = "IdentifierType" />
       <xsd:element name = "Constraint"          type = "ConstraintType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0"/>
       <xsd:group   ref  = "Extended:BatchEquipmentRequirement"
@@ -614,6 +640,8 @@
                                                 minOccurs = "0"/>
       <xsd:element name = "ApprovalDate"        type = "DateTimeType"
                                                 minOccurs = "0"/>
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:IndividualApproval"
@@ -633,6 +661,8 @@
       <xsd:element name = "Depiction"           type = "DepictionType" />
       <xsd:element name = "EvaluationOrder"     type = "EvaluationOrderType"
                                                 minOccurs = "0"/>
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:Link"       minOccurs="0" maxOccurs="1"/>
@@ -667,6 +697,8 @@
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType"              minOccurs = "0"/>
       <xsd:element name = "Version"             type = "IdentifierType"         minOccurs = "0"/>
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Origin"              type = "OriginType"          minOccurs = "0"/>
@@ -686,6 +718,8 @@
                                                  minOccurs = "0"/>
       <xsd:element name = "VersionDate"          type = "DateTimeType"
                                                  minOccurs = "0"/>
+      <xsd:element name = "Label"                type = "LabelType"
+                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"          type = "DescriptionType"
                                                  minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Header"               type = "HeaderType"  minOccurs = "0"/>
@@ -740,6 +774,8 @@
     <xsd:sequence>
       <xsd:element name = "ModifiedDate"        type = "DateTimeType"
                                                 minOccurs = "0"/>
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Author"              type = "AuthorType"
@@ -774,6 +810,8 @@
       <xsd:element name = "ID"                  type = "IdentifierType"          minOccurs = "0"/>
       <xsd:element name = "Value"               type = "BatchValueType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:OtherInformation"
@@ -792,6 +830,8 @@
   <xsd:complexType name = "BatchParameterType">
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType" />
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0"/>
       <xsd:element name = "ParameterType"       type = "ParameterTypeType" />
@@ -847,6 +887,8 @@
   <xsd:complexType name = "EquipmentElementPropertyType">
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType" />
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"               type = "BatchValueType"
@@ -860,6 +902,8 @@
 <!-- Complex Type with Extension -->
   <xsd:complexType name = "RecipeBuildingBlockType">
     <xsd:sequence>
+      <xsd:element name = "Label"               type = "LabelType"
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "RecipeElement"       type = "RecipeElementType"
@@ -877,6 +921,8 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "VersionDate"                 type = "DateTimeType"
                                                         minOccurs = "0"/>
+      <xsd:element name = "Label"                       type = "LabelType"
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "RecipeElementType"           type = "RecipeElementTypeType" />
@@ -1001,6 +1047,8 @@
       <xsd:element name = "ID"                    type = "IdentifierType" />
       <xsd:element name = "RecipeElementID"       type = "IdentifierType" />
       <xsd:element name = "RecipeElementVersion"  type = "IdentifierType" />
+      <xsd:element name = "LabelType"             type = "LabelType"
+                                                  minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"           type = "DescriptionType"
                                                   minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:Step"         minOccurs="0" maxOccurs="1"/>
@@ -1043,6 +1091,8 @@
       <xsd:element name = "Condition"             type = "ConditionType" />
       <xsd:element name = "ConditionAnnotation"   type = "ConditionAnnotationType"
                                                   minOccurs = "0"/>
+      <xsd:element name = "Label"                 type = "LabelType"
+                                                  minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"           type = "DescriptionType"
                                                   minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:Transition"   minOccurs="0" maxOccurs="1"/>
@@ -1142,6 +1192,7 @@
         <xsd:element name = "ID"                        type = "IdentifierType"/>
         <xsd:element name = "IndividualApproval"        type = "IndividualApprovalType"/>
 
+        <xsd:element name = "Label"                     type = "LabelType"/>
         <xsd:element name = "Link"                      type = "LinkType" />
         <xsd:element name = "LinkType"                  type = "LinkTypeType"/>
         <xsd:element name = "ListHeader"                type = "ListHeaderType"/>

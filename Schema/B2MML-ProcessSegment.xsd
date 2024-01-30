@@ -98,6 +98,8 @@ referenced work master shall have the same value as that of the process segment.
   <xsd:complexType name = "ProcessSegmentInformationType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
+      <xsd:element name = "Label"                       type = "LabelType"
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
@@ -114,6 +116,8 @@ referenced work master shall have the same value as that of the process segment.
   <xsd:complexType name = "ProcessSegmentType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
+      <xsd:element name = "Label"                       type = "LabelType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Version"                     type = "IdentifierType"   
@@ -166,6 +170,8 @@ referenced work master shall have the same value as that of the process segment.
 		   					                            minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PersonID"                    type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Label"                       type = "LabelType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PersonnelUse"                type = "CodeType" minOccurs = "0"/>
@@ -192,6 +198,8 @@ referenced work master shall have the same value as that of the process segment.
   <xsd:complexType name = "PersonnelSegmentSpecificationPropertyType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
+      <xsd:element name = "Label"                       type = "LabelType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                       type = "ValueType"
@@ -215,6 +223,8 @@ referenced work master shall have the same value as that of the process segment.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentID"                 type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>		   
+      <xsd:element name = "Label"                       type = "LabelType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentUse"                type = "CodeType" minOccurs = "0"/>
@@ -241,6 +251,8 @@ referenced work master shall have the same value as that of the process segment.
   <xsd:complexType name = "EquipmentSegmentSpecificationPropertyType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
+      <xsd:element name = "Label"                       type = "LabelType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                       type = "ValueType"
@@ -264,6 +276,8 @@ referenced work master shall have the same value as that of the process segment.
 		                                                    minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetID"             type = "IdentifierType" 
                                                        	minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Label"                       type = "LabelType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetUse"            type = "CodeType" minOccurs = "0"/>
@@ -290,6 +304,8 @@ referenced work master shall have the same value as that of the process segment.
   <xsd:complexType name = "PhysicalAssetSegmentSpecificationPropertyType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
+      <xsd:element name = "Label"                       type = "LabelType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                       type = "ValueType"
@@ -318,6 +334,8 @@ referenced work master shall have the same value as that of the process segment.
 		   					                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialSublotID"  		      type = "IdentifierType"   
 		   					                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Label"                       type = "LabelType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "AssemblyType"                type = "AssemblyTypeType" minOccurs = "0"/>
@@ -349,6 +367,8 @@ referenced work master shall have the same value as that of the process segment.
   <xsd:complexType name = "MaterialSegmentSpecificationPropertyType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
+      <xsd:element name = "Label"                       type = "LabelType"
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                       type = "ValueType"

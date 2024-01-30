@@ -75,6 +75,8 @@
   <xsd:complexType name = "OperationsPerformanceType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
+      <xsd:element name = "Label"                       type = "LabelType"
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Version"                     type = "IdentifierType"   
@@ -103,6 +105,8 @@
   <xsd:complexType name = "OperationsResponseType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
+      <xsd:element name = "Label"                       type = "LabelType"
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/> 
       <xsd:element name = "Version"                     type = "IdentifierType"   

@@ -84,6 +84,8 @@
   <xsd:complexType name = "OperationsCapabilityInformationType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
+      <xsd:element name = "Label"                       type = "LabelType"
+                                                        minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
@@ -100,6 +102,8 @@
   <xsd:complexType name = "OperationsCapabilityType">
     <xsd:sequence>
       <xsd:element name = "ID"                      type = "IdentifierType"/>
+      <xsd:element name = "Label"                   type = "LabelType"
+                                                    minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Version"                 type = "IdentifierType"
@@ -142,6 +146,8 @@
   <xsd:complexType name = "OpProcessSegmentCapabilityType">
     <xsd:sequence>
       <xsd:element name = "ID"                      type = "IdentifierType"/>
+      <xsd:element name = "Label"                   type = "LabelType"
+                                                    minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Version"                 type = "IdentifierType"
@@ -180,6 +186,8 @@
     <xsd:complexType name = "OpOperationsSegmentCapabilityType">
     <xsd:sequence>
       <xsd:element name = "ID"                      type = "IdentifierType"/>
+      <xsd:element name = "Label"                   type = "LabelType"
+                                                    minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Description"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Version"                 type = "IdentifierType"
